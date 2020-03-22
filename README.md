@@ -26,7 +26,13 @@ The complete architecture is shown as follows,
 # Implementation
 ## 1. Quick testing
 ---------------------------------------
-### Copy your image to folder "Test" and run test.sh. The SR images will be in folder "Result"
+1. Download pre-trained models from
+
+2. Copy your image to folder "Test" and run 
+```sh
+$ python test.py
+```
+The SR images will be in folder "Result"
 
 ## 2. Testing for NTIRE 20202
 ---------------------------------------
@@ -51,7 +57,11 @@ https://competitions.codalab.org/competitions/22220#learn_the_details
 
    
 ### s2. Start training on Pytorch
-For user who already has installed Pytorch 1.1, simply just run the following code for AIM2019 Constrained Super-Resolution Challenge - Track 3: Fidelity optimization:
+1. Train the Denoising VAE by running
+```sh
+$ python main.py
+```
+2. Train the super-resolution SRSN overhead by running
 ```sh
 $ python main_GAN.py
 ```
