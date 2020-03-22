@@ -21,7 +21,7 @@ We propose a joint image denoising and Super-Resolution model by using generativ
 # Complete Architecture
 The complete architecture is shown as follows,
 
-![network](/figure/network.png)
+![network](/figure/figure1.png)
 
 # Implementation
 ## 1. Quick testing
