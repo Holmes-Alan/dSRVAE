@@ -28,6 +28,10 @@ The complete architecture is shown as follows,
 ---------------------------------------
 1. Download pre-trained models from
 
+https://drive.google.com/open?id=1SUZGE04vw5_yDYiw6PJ4sbHAOIEV6TJ7
+
+and copy them to the folder "models"
+
 2. Copy your image to folder "Test" and run 
 ```sh
 $ python test.py
@@ -37,17 +41,17 @@ The SR images will be in folder "Result"
 ## 2. Testing for NTIRE 20202
 ---------------------------------------
 
-### s1. Testing images on NTIRE2020 Extreme Super-Resolution Challenge - Track 1: Image Processing artifacts can be downloaded from the following link:
+### s1. Testing images on NTIRE2020 Real World Super-Resolution Challenge - Track 1: Image Processing artifacts can be downloaded from the following link:
 
-https://competitions.codalab.org/competitions/20235
+https://drive.google.com/open?id=10ZutE-0idGFW0KUyfZ5-2aVSiA-1qUCV
 
-### s2. Testing images on AIM2019 Constrained Super-Resolution Challenge - Track 3: Fidelity optimization can be downloaded from the following link:
+### s2. Testing images on NTIRE2020 Real World Super-Resolution Challenge - Track 2: Smartphone Images can be downloaded from the following link:
 
-https://competitions.codalab.org/competitions/20169
+https://drive.google.com/open?id=1_R4kRO_029g-HNAzPobo4-xwp86bMZLW
 
-General testing dataset (Set5, Set14, BSD100, Urban100 and Manga109) can be downloaded from:
+### s3. Validation images on NTIRE2020 Real World Super-Resolution Challenge - Track 1 and Track 2 can be downloaded from the following link:
 
-https://github.com/LimBee/NTIRE2017
+https://drive.google.com/open?id=1nKEJ4N2V-0NFicfJxm8AJqsjXoGMYjMp
 
 ## 3. Training
 ---------------------------
