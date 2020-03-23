@@ -75,4 +75,6 @@ $ python main_GAN.py
 
 ## 1. Visualization comparison
 Results on 4x image SR on Track 1 dataset
-![visual](/figure/visualization.png)
+![figure2](/figure/figreu2.png)
+![figure3](/figure/figreu3.png)
+![figure4](/figure/figreu4.png)
