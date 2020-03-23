@@ -63,7 +63,7 @@ https://competitions.codalab.org/competitions/22220#learn_the_details
 ### s2. Start training on Pytorch
 1. Train the Denoising VAE by running
 ```sh
-$ python main.py
+$ python main_denoiser.py
 ```
 2. Train the super-resolution SRSN overhead by running
 ```sh
@@ -75,6 +75,6 @@ $ python main_GAN.py
 
 ## 1. Visualization comparison
 Results on 4x image SR on Track 1 dataset
-![figure2](/figure/figreu2.png)
-![figure3](/figure/figreu3.png)
-![figure4](/figure/figreu4.png)
+![figure2](/figure/figure2.png)
+![figure3](/figure/figure3.png)
+![figure4](/figure/figure4.png)
