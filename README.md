@@ -15,7 +15,7 @@ We propose a joint image denoising and Super-Resolution model by using generativ
 # Dependencies
     Python > 3.0
     OpenCV library
-    Pytorch > 1.2 
+    Pytorch > 1.0
     NVIDIA GPU + CUDA
 
 # Complete Architecture
@@ -37,6 +37,10 @@ and copy them to the folder "models"
 $ python test.py
 ```
 The SR images will be in folder "Result"
+3. For self-ensemble, run
+```sh
+$ python test_enhance.py
+```
 
 ## 2. Testing for NTIRE 20202
 ---------------------------------------
