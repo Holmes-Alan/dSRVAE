@@ -64,12 +64,17 @@ if cuda:
 
 print('===> Loading datasets')
 
-if os.path.exists(model_denoiser):
-    denoiser.load_state_dict(torch.load(model_denoiser, map_location=lambda storage, loc: storage)) 
+if os.path.exists(opt.model_denoiser):
+    # denoiser.load_state_dict(torch.load(opt.model_denoiser, map_location=lambda storage, loc: storage)) 
+    pretrained_dict = torch.load(opt.model_denoiser, map_location=lambda storage, loc: storage)
+    model_dict = denoiser.state_dict()
+    pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+    model_dict.update(pretrained_dict)
+    denoiser.load_state_dict(model_dict)
     print('Pre-trained Denoiser model is loaded.')
 
-if os.path.exists(model_SR):
-    model.load_state_dict(torch.load(model_SR, map_location=lambda storage, loc: storage))
+if os.path.exists(opt.model_SR):
+    model.load_state_dict(torch.load(opt.model_SR, map_location=lambda storage, loc: storage))
     print('Pre-trained SR model is loaded.')
 
 def eval():
