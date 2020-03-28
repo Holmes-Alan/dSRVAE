@@ -3,13 +3,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.distributions.normal import Normal
 from torch.distributions import kl_divergence
-from utils.distributions import log_Bernoulli, log_Normal_diag, log_Normal_standard, log_Logistic_256
+from distributions import log_Bernoulli, log_Normal_diag, log_Normal_standard, log_Logistic_256
 from torch.autograd import Variable
 import torchvision
 import numpy as np
-from laploss import LapMap
 
-from functions import vq, vq_st
 
 
 
