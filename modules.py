@@ -224,14 +224,7 @@ class VAE_denoise(nn.Module):
         SR_feat = self.SR_recon(com_feat)
         Denoise_LR = LR - self.SR_mu(SR_feat)
 
-        # start SR
-        LR_feat = self.denoise_feat(torch.cat((LR, Denoise_LR), 1))
-        com_feat = LR_feat + mu_feat
-        SR_feat = self.SR_recon_L2(com_feat)
-        SR = self.SR_final(SR_feat) + up(LR)
-
-
-        return Denoise_LR, SR
+        return Denoise_LR
 
 
     def forward(self, HR_feat, LR, down_ref):
@@ -246,10 +239,10 @@ class VAE_denoise(nn.Module):
         KL = -(log_p_z - log_q_z)
         KL = torch.sum(KL)
 
-        Denoise_LR, SR = self.decode(LR, down_ref, z_q)
+        Denoise_LR = self.decode(LR, down_ref, z_q)
 
 
-        return Denoise_LR, SR, KL
+        return Denoise_LR, KL
 
 
 
