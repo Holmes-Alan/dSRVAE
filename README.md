@@ -6,6 +6,8 @@ This repo only provides simple testing codes, pretrained models and the network 
 
 We propose a joint image denoising and Super-Resolution model by using generative Variational AutoEncoder (dSRVAE)
 
+We participate CVPRW [NTIRE2020 Real Image Super-Resolution Challenge](https://data.vision.ee.ethz.ch/cvl/ntire20/)
+
 # For proposed dSRVAE model, we claim the following points:
 
 • First working on using Variational AutoEncoder for image denoising.
