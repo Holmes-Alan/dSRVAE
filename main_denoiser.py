@@ -60,21 +60,21 @@ def train(epoch):
 
 
         HR_feat = HR_feat_extractor(target).detach()
-        Denoise_LR, SR, KL = model(HR_feat, input)
+        Denoise_LR, KL = model(HR_feat, input)
         KL_loss = torch.sum(KL)
         # Reconstruction loss
-        SR_loss = L1_criterion(SR, target)
+        SR_loss = L1_criterion(Denoise_LR, target)
 
 
-        loss = SR_loss + GLO_loss + KL_loss
+        loss = SR_loss + KL_loss
 
         t1 = time.time()
         epoch_loss += loss.data
         loss.backward()
         optimizer.step()
 
-        print("===> Epoch[{}]({}/{}): SR_recon: {:.4f} GLO_recon: {:.4f} KL_loss: {:.4f} || Timer: {:.4f} sec.".format(epoch, iteration,
-                                                                                 len(training_data_loader), SR_loss.data, GLO_loss.data, KL_loss.data,
+        print("===> Epoch[{}]({}/{}): SR_recon: {:.4f} KL_loss: {:.4f} || Timer: {:.4f} sec.".format(epoch, iteration,
+                                                                                 len(training_data_loader), SR_loss.data, KL_loss.data,
                                                                                  (t1 - t0)))
 
     print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, epoch_loss / len(training_data_loader)))
