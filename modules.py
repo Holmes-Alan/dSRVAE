@@ -132,13 +132,6 @@ class VAE_denoise(nn.Module):
             ResnetBlock(dim, 3, 1, 1),
         )
 
-        self.SR_recon_L2 = nn.Sequential(
-            UpBlock(dim, dim, 6, 4, 1),
-            DownBlock(dim, dim, 6, 4, 1),
-            UpBlock(dim, dim, 6, 4, 1),
-
-        )
-
 
         self.SR_mu = nn.Sequential(
             nn.Conv2d(dim, input_dim, 3, 1, 1),
