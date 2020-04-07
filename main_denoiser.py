@@ -33,7 +33,7 @@ parser.add_argument('--data_augmentation', type=bool, default=True)
 parser.add_argument('--model_type', type=str, default='VAE')
 parser.add_argument('--patch_size', type=int, default=128, help='Size of cropped LR image')
 parser.add_argument('--pretrained_sr', default='VAE_epoch_160.pth', help='sr pretrained base model')
-parser.add_argument('--pretrained', type=bool, default=True)
+parser.add_argument('--pretrained', type=bool, default=False)
 parser.add_argument('--save_folder', default='models/', help='Location to save checkpoint models')
 parser.add_argument('--log_folder', default='logs/', help='Location to save checkpoint models')
 
