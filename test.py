@@ -148,4 +148,4 @@ def chop_forward(img):
 
 
 ##Eval Start!!!!
-eval(i)
+eval()
