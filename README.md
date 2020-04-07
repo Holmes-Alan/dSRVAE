@@ -1,6 +1,6 @@
 # SRVAE (Generative Variational AutoEncoder for Real Image Super-Resolution)
 
-By Zhi-Song, Li-Wen Wang, Marie-Paule Cani and Wan-Chi Siu
+By Zhi-Song, Li-Wen Wang, Chu-Tak Li, Marie-Paule Cani and Wan-Chi Siu
 
 This repo only provides simple testing codes, pretrained models and the network strategy demo.
 
