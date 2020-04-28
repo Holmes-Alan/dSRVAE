@@ -104,7 +104,7 @@ class ResnetBlock(torch.nn.Module):
 
 
 class VAE_denoise(nn.Module):
-    def __init__(self, input_dim, dim, feat_size, z_dim, prior, number_component):
+    def __init__(self, input_dim, dim, feat_size, z_dim, prior):
         super(VAE_denoise, self).__init__()
 
         self.LR_feat = nn.Sequential(
@@ -180,7 +180,7 @@ class VAE_denoise(nn.Module):
                 if m.bias is not None:
                     m.bias.data.zero_()
 
-    def log_p_z(self, z, idle, c, prior):
+    def log_p_z(self, z, prior):
         if prior == 'standard':
             log_prior = log_Normal_standard(z, dim=1)
 
@@ -233,7 +233,7 @@ class VAE_denoise(nn.Module):
         # reparameterize
         z_q = self.reparameterize(z_q_mu, z_q_logvar, flag=0)
         # prior
-        log_p_z = self.log_p_z(z_q, self.idle_input, self.number_component, self.prior)
+        log_p_z = self.log_p_z(z_q, self.prior)
         # KL
         log_q_z = log_Normal_diag(z_q, z_q_mu, z_q_logvar, dim=1)
         KL = -(log_p_z - log_q_z)
