@@ -83,7 +83,7 @@ def eval():
     model.eval()
 
     LR_image = [join(opt.input, x) for x in listdir(opt.input) if is_image_file(x)]
-    SR_image = [join(opt.Result, x) for x in listdir(opt.input) if is_image_file(x)]
+    SR_image = [join(opt.output, x) for x in listdir(opt.input) if is_image_file(x)]
     avg_psnr_predicted = 0.0
 
     for i in range(LR_image.__len__()):
