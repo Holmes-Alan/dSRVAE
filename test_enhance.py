@@ -53,7 +53,7 @@ if cuda:
 print('===> Building model ', opt.model_type)
 
 
-denoiser = VAE_denoise_vali(input_dim=3, dim=32, feat_size=8, z_dim=512, prior='standard', number_component=512)
+denoiser = VAE_denoise_vali(input_dim=3, dim=32, feat_size=8, z_dim=512, prior='standard')
 model = VAE_SR(input_dim=3, dim=64, scale_factor=opt.upscale_factor)
 
 denoiser = torch.nn.DataParallel(denoiser, device_ids=gpus_list)
