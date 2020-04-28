@@ -143,7 +143,6 @@ class VAE_denoise(nn.Module):
 
 
         self.prior = prior
-        self.number_component = number_component
         self.feat_size = feat_size
 
         self.VAE_encoder = nn.Sequential(
@@ -247,7 +246,7 @@ class VAE_denoise(nn.Module):
 
 
 class VAE_denoise_vali(nn.Module):
-    def __init__(self, input_dim, dim, feat_size, z_dim, prior, number_component):
+    def __init__(self, input_dim, dim, feat_size, z_dim, prior):
         super(VAE_denoise_vali, self).__init__()
 
         self.LR_feat = nn.Sequential(
@@ -273,7 +272,6 @@ class VAE_denoise_vali(nn.Module):
             nn.Conv2d(dim, input_dim, 3, 1, 1),
         )
         self.prior = prior
-        self.number_component = number_component
         self.feat_size = feat_size
 
         self.VAE_encoder = nn.Sequential(
