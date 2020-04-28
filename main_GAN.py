@@ -195,7 +195,7 @@ training_data_loader = DataLoader(dataset=train_set, num_workers=opt.threads, ba
 
 print('===> Building model')
 
-denoiser = VAE_denoise_vali(input_dim=3, dim=32, feat_size=8, z_dim=512, prior='standard', number_component=512)
+denoiser = VAE_denoise_vali(input_dim=3, dim=32, feat_size=8, z_dim=512, prior='standard')
 G = VAE_SR(input_dim=3, dim=64, scale_factor=opt.upscale_factor)
 D = discriminator(num_channels=3, base_filter=64, image_size=opt.patch_size * opt.upscale_factor)
 feat_extractor = VGGFeatureExtractor(feature_layer=34, use_bn=False, use_input_norm=True, device='cuda')
