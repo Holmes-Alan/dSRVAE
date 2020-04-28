@@ -110,7 +110,7 @@ training_data_loader = DataLoader(dataset=train_set, num_workers=opt.threads, ba
 
 print('===> Building model ', opt.model_type)
 
-model = VAE_denoise(input_dim=3, dim=32, feat_size=8, z_dim=512, prior='standard', number_component=512)
+model = VAE_denoise(input_dim=3, dim=32, feat_size=8, z_dim=512, prior='standard')
 
 HR_feat_extractor = VGGFeatureExtractor(feature_layer=36, use_bn=False, use_input_norm=True, device='cuda')
 
