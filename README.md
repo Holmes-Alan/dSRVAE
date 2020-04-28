@@ -9,6 +9,17 @@ We propose a joint image denoising and Super-Resolution model by using generativ
 We participate CVPRW [NTIRE2020 Real Image Super-Resolution Challenge](https://data.vision.ee.ethz.ch/cvl/ntire20/)
 
 Please check our [paper](https://arxiv.org/abs/2004.12811)
+
+# BibTex
+
+        @InProceedings{Liu2020dsrvae,
+            author = {Liu, Zhi-Song Siu, Wan-Chi and and Wang, Li-Wen and Li, Chu-Tak and Marie-Paule Cani and Yui-Lam Chan},
+            title = {Unsupervised Real Image Super-Resolution via Generative Variational AutoEncoder},
+            booktitle = {IEEE International Conference on Computer Vision and Pattern Recognition Workshop(CVPRW)},
+            month = {June},
+            year = {2020}
+        }
+        
 # For proposed dSRVAE model, we claim the following points:
 
 • First working on using Variational AutoEncoder for image denoising.
