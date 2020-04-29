@@ -102,19 +102,10 @@ class DatasetFromFolder(data.Dataset):
 
         target = load_img(self.hr_image_filenames[index])
         target = modcrop(target, 16)
-        ref = load_img(self.hr_image_filenames[2649-index])
+        ref = load_img(self.hr_image_filenames[len(self.hr_image_filenames)-index])
         ref = modcrop(ref, 16)
         name = self.hr_image_filenames[index]
-        # lr_name = name[:35] + 'LR_4x/' + name[38:-4]+'x4.png'
-        lr_name = name[:32]+'LR/Flickr2K_'+name[-10:]
-        if not os.path.exists(lr_name):
-            print(lr_name)
-        input = load_img(lr_name)
-
-        # input = load_img(self.lr_image_filenames[index])
-        # name = self.lr_image_filenames[index]
-        # hr_name = name[:32] + 'HR/' + name[35:-4]+'.png'
-        # target = load_img(hr_name)
+        input = load_img(self.lr_image_filenames[index])
 
         input, target, ref = get_patch(input, target, ref, self.patch_size, self.upscale_factor)
 
@@ -123,7 +114,6 @@ class DatasetFromFolder(data.Dataset):
 
         if self.transform:
             input = self.transform(input)
-            #bicubic = self.transform(bicubic)
             target = self.transform(target)
             ref = self.transform(ref)
 
