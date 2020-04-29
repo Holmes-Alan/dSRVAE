@@ -56,7 +56,6 @@ The SR images will be in folder "Result"
 $ python test_enhance.py
 ```
 
-Thanks to the contributions of Jakub M. Tomczak for their [VAE with a VampPrior](https://github.com/jmtomczak/vae_vampprior) on KL loss calculation. 
 
 ## 2. Testing for NTIRE 20202
 ---------------------------------------
@@ -98,3 +97,6 @@ Results on 4x image SR on Track 1 dataset
 ![figure2](/figure/figure2.png)
 ![figure3](/figure/figure3.png)
 ![figure4](/figure/figure4.png)
+
+
+Special thanks to the contributions of Jakub M. Tomczak for their [VAE with a VampPrior](https://github.com/jmtomczak/vae_vampprior) on KL loss calculation. 
