@@ -13,7 +13,7 @@ Please check our [paper](https://arxiv.org/abs/2004.12811)
 # BibTex
 
         @InProceedings{Liu2020dsrvae,
-            author = {Liu, Zhi-Song Siu, Wan-Chi and and Wang, Li-Wen and Li, Chu-Tak and Marie-Paule Cani and Yui-Lam Chan},
+            author = {Zhi-Song Liu, Wan-Chi Siu and Li-Wen Wang and Chu-Tak Li and Marie-Paule Cani and Yui-Lam Chan},
             title = {Unsupervised Real Image Super-Resolution via Generative Variational AutoEncoder},
             booktitle = {IEEE International Conference on Computer Vision and Pattern Recognition Workshop(CVPRW)},
             month = {June},
