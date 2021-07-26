@@ -99,4 +99,11 @@ Results on 4x image SR on Track 1 dataset
 ![figure4](/figure/figure4.png)
 
 
+# Reference
+You may check our newly work on [General image super-resolution using VAE](https://github.com/Holmes-Alan/SR-VAE)
+
+You may also check our work on [Reference based face SR using VAE](https://github.com/Holmes-Alan/RefSR)
+
+You may also check our work on [Reference based General image SR using VAE](https://github.com/Holmes-Alan/RefVAE)
+
 Special thanks to the contributions of Jakub M. Tomczak for their [VAE with a VampPrior](https://github.com/jmtomczak/vae_vampprior) on KL loss calculation. 
