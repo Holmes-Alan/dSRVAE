@@ -211,7 +211,7 @@ class VAE_denoise(nn.Module):
 
         return z_q_mu, z_q_logvar
 
-    def decode(self, LR, down_ref, z_q):
+    def decode(self, LR, z_q):
         up = torch.nn.Upsample(scale_factor=4, mode='bicubic')
         LR_feat = self.LR_feat(LR)
         dec_feat = self.VAE_decoder(z_q)
@@ -226,7 +226,7 @@ class VAE_denoise(nn.Module):
         return Denoise_LR
 
 
-    def forward(self, HR_feat, LR, down_ref):
+    def forward(self, HR_feat, LR):
         z_q_mu, z_q_logvar = self.encode(HR_feat)
 
         # reparameterize
@@ -238,7 +238,7 @@ class VAE_denoise(nn.Module):
         KL = -(log_p_z - log_q_z)
         KL = torch.sum(KL)
 
-        Denoise_LR = self.decode(LR, down_ref, z_q)
+        Denoise_LR = self.decode(LR, z_q)
 
 
         return Denoise_LR, KL
