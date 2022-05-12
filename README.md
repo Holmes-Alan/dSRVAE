@@ -1,4 +1,4 @@
-# SRVAE (Generative Variational AutoEncoder for Real Image Super-Resolution)
+# dSRVAE (Generative Variational AutoEncoder for Real Image Super-Resolution)
 
 By Zhi-Song Liu, Li-Wen Wang, Chu-Tak Li, Marie-Paule Cani and Wan-Chi Siu
 
