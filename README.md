@@ -58,6 +58,7 @@ $ python test_enhance.py
 ```
 4. GAN feature evaluation
 ```
+# download statistics.npz from http://bioinf.jku.at/research/ttur/
 from pytorch_gan_metrics import get_inception_score, get_fid
 
 images = ... # [N, 3, H, W] normalized to [0, 1]
