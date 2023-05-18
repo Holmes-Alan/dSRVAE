@@ -31,6 +31,7 @@ Please check our [paper](https://arxiv.org/abs/2004.12811)
     OpenCV library
     Pytorch > 1.0
     NVIDIA GPU + CUDA
+    pytorch-gan-metrics
 
 # Complete Architecture
 The complete architecture is shown as follows,
@@ -54,6 +55,14 @@ The SR images will be in folder "Result"
 3. For self-ensemble, run
 ```sh
 $ python test_enhance.py
+```
+4. GAN feature evaluation
+```
+from pytorch_gan_metrics import get_inception_score, get_fid
+
+images = ... # [N, 3, H, W] normalized to [0, 1]
+IS, IS_std = get_inception_score(images)        # Inception Score
+FID = get_fid(images, 'path/to/statistics.npz') # Frechet Inception Distance
 ```
 
 
